@@ -1,0 +1,31 @@
+package com.user.day1.Repository;
+
+
+
+
+import java.util.List;
+
+import javax.swing.tree.TreeModel;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.user.day1.database.TreesModel;
+
+
+
+public interface TreeRepo extends JpaRepository<TreesModel, Integer>
+{
+
+	List<TreeModel> getAllData();
+
+	List<TreeModel> byOwnerName(int gid);
+
+	List<TreeModel> startEnd(int start, int end);
+
+	void deleteby(int id, String oname);
+
+	List<TreeModel> jpql(int gid);
+	
+
+	
+}

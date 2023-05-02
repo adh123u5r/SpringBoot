@@ -1,0 +1,46 @@
+package com.user.day1.serv;
+
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.Repository;
+import org.springframework.stereotype.Service;
+
+import com.user.day1.Repository.RepoLogin;
+import com.user.day1.database.ModelLogin;
+
+
+
+
+@Service
+public class ServicesLogin {
+	
+
+		@Autowired
+		private RepoLogin repository;
+		
+		
+		public String checkLogin(String uname, String pwd) {
+		    ModelLogin user = repository.findAll(uname);
+		    if (user == null) {
+		      return "User Not Found";
+		    }
+		    else{
+		    	if(user.getPwd().equals(pwd)) {	    		
+		    		return"Login Succesfull"; 
+		    	}
+		    	else {
+		    		return "Login Failed";
+		    	}
+		    }
+		}
+		public ModelLogin addUser(ModelLogin game) {
+			return repository.addUser(game);
+		}
+		public List<ModelLogin> getUser()
+		{
+			return repository.findAll();
+		}
+		
+	}

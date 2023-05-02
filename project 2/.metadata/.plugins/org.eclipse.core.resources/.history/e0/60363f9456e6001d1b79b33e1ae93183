@@ -1,0 +1,10 @@
+package com.user.day1.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.user.database.Info.ModelLogin;
+
+
+public interface RepoLogin extends JpaRepository<ModelLogin, Integer> {
+
+	ModelLogin findByuname(String uname);
+}

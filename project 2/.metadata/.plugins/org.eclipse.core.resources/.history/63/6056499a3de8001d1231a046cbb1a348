@@ -1,0 +1,5 @@
+package com.user.day1.Repository;
+
+public interface GameRepository {
+
+}
