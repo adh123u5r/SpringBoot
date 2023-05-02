@@ -1,6 +1,0 @@
-package com.user.day1.Repository;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-interface Repopalm extends JpaRepository<T, ID> {
-
-}

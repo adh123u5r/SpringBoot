@@ -1,7 +1,0 @@
-package com.user.day1.database;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface RepoPalm extends JpaRepository<ModelPalm, Integer> {
-	ModelPalm findByuname(String uname);
-}
