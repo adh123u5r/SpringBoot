@@ -84,8 +84,6 @@ public class TreesModel {
 				+ treeweight + ", treeleaves=" + treeleaves + ", treetypes=" + treetypes + ", treeseeds=" + treeseeds
 				+ "]";
 	}
-	
-	
 
 }
 	
